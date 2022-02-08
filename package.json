@@ -9,8 +9,7 @@
   },
   "devDependencies": {
     "electron": "^14.0.1",
-    "electron-builder": "^22.11.7",
-    "electron-notarize": "^1.1.1"
+    "electron-builder": "^22.11.7"
   },
   "dependencies": {
     "electron-log": "^4.4.1",
@@ -25,19 +24,11 @@
         "repo": "electron-updater-example-practice"
       }
     ],
-    "afterSign": "./build/notarize.js",
-    "mac": {
-      "category": "your.app.category.type"
-    },
     "win": {
       "target": "nsis"
     },
     "nsis": {
       "oneClick": false
-    },
-    "linux": {
-      "category": "your.app.category.type",
-      "target": "AppImage"
     }
   }
 }
