@@ -5,7 +5,7 @@
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
-    "publish": "electron-builder -p always"
+    "publish": "electron-builder --win -p always"
   },
   "devDependencies": {
     "electron": "^14.0.1",
@@ -17,7 +17,14 @@
     "electron-updater": "^4.3.9"
   },
   "build": {
-    "appId": "com.github.iffy.electronupdaterexample",
+    "appId": "com.github.i33w.electronupdaterexample",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "i33w",
+        "repo": "electron-updater-example-practice"
+      }
+    ],
     "afterSign": "./build/notarize.js",
     "mac": {
       "category": "your.app.category.type"
